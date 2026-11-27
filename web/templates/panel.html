@@ -12,12 +12,14 @@
       <button class="btn btn-outline-light d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">☰</button>
       <a class="navbar-brand ms-2" href="{% url 'inicio' %}">Mi Panel</a>
       <div class="dropdown">
-        <a class="btn btn-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">Usuario</a>
+        <a class="btn btn-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          {{ request.user.username }}
+          </a>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item" href="#">Perfil</a></li>
           <li><hr class="dropdown-divider"></li>
           <!-- Enlace a login corregido -->
-          <li><a class="dropdown-item" href="{% url 'login' %}">Cerrar sesión</a></li>
+          <li><a class="dropdown-item" href="{% url 'salir' %}">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>

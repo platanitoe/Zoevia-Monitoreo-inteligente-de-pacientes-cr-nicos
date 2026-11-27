@@ -66,8 +66,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [], # Puede estar vacío
-        'APP_DIRS': True,  # <-- ¡ESTO ES VITAL! Debe ser True
+        'DIRS': [], 
+        'APP_DIRS': True,  
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
@@ -137,3 +137,7 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+LOGIN_URL = 'login'            #
+LOGIN_REDIRECT_URL = 'panel'   
+LOGOUT_REDIRECT_URL = 'login'  
